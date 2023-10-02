@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Projeto Pokedex
+Esse desafio faz parte do curso DevQuest, ele serve para simular um teste técnico, passando demadas e requisitos que devem ser implementados e seguidos durante a codificação. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Aplicação🕹️:
+  <img src="./src/img/aplicação.png">
+  <a href="https://quest-pokedex.vercel.app/">Link do deploy</a>
 
-## Available Scripts
+### Funcionalidades ⚙️
+  Para a construção dessa aplicação utilizamos a api pública do pokemon (pokeapi) 
 
-In the project directory, you can run:
+  Algumas funcionalidades da aplicação:
+  - Mudança de tema utilizando context api 
+  <img src="./src/img/mudarTheme.gif">
 
-### `yarn start`
+  - Para a estilização da aplicação foi utilizada o styled-components
+  <img src="./src/img/styledCmp.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Renderização de mais pokemons
+  <img src="./src/img/maisPokemon.gif">
+  
+  - Exibir mais detalhes do pokemon
+  <img src="./src/img/infoPokemon.gif">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  Ferramentas utilizadas🛠️:
+  - ReactJS : para construção da aplicação como todo
+  - styled-components : para estilização
+  - react-router-dom : para navegação entre as páginas
+  - Context Api: criação do theme toggler (mudança de tema)
 
-### `yarn test`
+## Instalação 📦
+ <p>
+  Para instalar o projeto no seu computador vai precisar: 
+  </p>
+  <li>Baixar o projeto:</li>
+  <img src="./src/img/Screenshot_5.png" width="280"> <br> <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <li>Extrai a pasta baixada do projeto e dentro dela abre o prompt </li> <br>
 
-### `yarn build`
+   <li>Agora vamos instalar as dependências do projeto, para isso podemos usar gerenciador de pacotes NPM</li> <br>
+  <p>Para instalar as dependências do projeto rodamos o seguinte comando:</p>
+</ol>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  ```sh
+    npm install
