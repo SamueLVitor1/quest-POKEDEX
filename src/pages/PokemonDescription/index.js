@@ -37,7 +37,7 @@ export function PokemonDescription() {
     }
     
     fetchDescription()
-  }, [])
+  })
 
 
 
