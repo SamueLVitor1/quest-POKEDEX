@@ -14,6 +14,8 @@ export function PokemonDescription() {
   const [moves, setMovesPokemon] = useState([])
   const [pokemonUrl, setPokemonUrl] = useState([])
   const [resultPokemonAbility, setResultPokemonAbility] = useState([])
+  const [descriptionPokemonUrl, setDescriptionPokemonUrl] = useState('')
+  const [descriptionPokemon, setDescriptionPokemon] = useState('')
 
   useEffect(() => {
     const chamadaApi = async () => {
@@ -22,10 +24,21 @@ export function PokemonDescription() {
       setImgPokemon(data.sprites.front_default)
       setMovesPokemon(data.moves.slice(0, 25))
       setPokemonUrl(data.abilities)
+      setDescriptionPokemonUrl(data.species.url)
     }
     chamadaApi()
-
   }, [nameID])
+
+  useEffect(() => {
+    async function fetchDescription () {
+      const response = await fetch(descriptionPokemonUrl).then(response => response.json())
+      const descriptionText = response.flavor_text_entries.find(propertyes => propertyes.language.name === 'en').flavor_text.replace(/\f/g, '')
+      setDescriptionPokemon(descriptionText)
+    }
+    
+    fetchDescription()
+  }, [])
+
 
 
   useEffect(() => {
@@ -44,8 +57,6 @@ export function PokemonDescription() {
     chamadaAbilitiesPokemon()
   }, [pokemon])
 
-  console.log(resultPokemonAbility)
-
   return (
 
     <Container theme={theme}>
@@ -56,6 +67,8 @@ export function PokemonDescription() {
             <h2>{pokemon.name}</h2>
 
             <img src={imgPokemon} />
+
+            <p style={{textAlign: "center"}}>{descriptionPokemon}</p>
           </div>
 
           <div>
@@ -76,7 +89,7 @@ export function PokemonDescription() {
 
             {resultPokemonAbility.map((ability, index) => {
               return (
-                <div>
+                <div key={index}>
                   <span>
                     {ability.name}
                   </span>
